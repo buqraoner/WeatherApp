@@ -1,5 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
+body{
+    background-color: #6b5b95;
+}
+.tarih-saat{
+    text-align: center;
+    padding-top: 0px;
+    color: white;
+    justify-content: center;
+    font-size: medium;
+}
+
 .container {
 
     display: flex;
@@ -13,6 +24,7 @@
 
 .buttonsehir{
     background-color: red;
+    
 }
 
 

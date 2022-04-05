@@ -4,16 +4,17 @@ import Weather from './Weather';
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/semantic-ui-react/dist/umd/semantic-ui-react.min.js"></script>
+
 
 function WeatherApi() {
     const [lat, setLat] = useState([]);
     const [long, setLong] = useState([]);
     const [data, setData] = useState([]);
+    const [istanbul,setIstanbul] = useState([]);
 
 
     // Konum alma, enlem ve boylamını alıp state'leri dolduruyoruz.
-
+    //Kullanıcıdan konum alıyoruz
     useEffect(() => {
         const fetchData = async () => {
             navigator.geolocation.getCurrentPosition(function (position) {
@@ -35,18 +36,18 @@ function WeatherApi() {
         fetchData();
 
     }, [lat, long]);
-
-
+    
 
 
     return (
         <div className="App">
+            
             {(typeof data.main != 'undefined') ? (
                 <Weather weatherData={data} />
             ) : (
-                <div>??safdsa?ssafdafsafsfsdsad?</div>
+                <div>Konumunuz alınamadı</div>
             )}
-
+            
         </div>
     );
 }
